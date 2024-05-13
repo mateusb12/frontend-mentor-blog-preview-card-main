@@ -3,7 +3,8 @@
     --black: hsl(0, 0%, 7%);
     --shadow: hsl(0, 0%, 0%);
     --white: hsl(0, 0%, 100%);
-    --grey: hsl(0, 0%, 50%)
+    --grey: hsl(0, 0%, 50%);
+    --card-margin: 1em;
 }
 
 @font-face {
@@ -82,12 +83,12 @@ body {
 }
 
 .date{
-    margin-top: 15px;
+    margin-top: var(--card-margin);
     font-size: 13px;
 }
 
 .foundations{
-    margin-top: 15px;
+    margin-top: var(--card-margin);
     font-size: 22px;
 }
 
@@ -97,7 +98,7 @@ body {
 }
 
 .description {
-    margin-top: 15px;
+    margin-top: var(--card-margin);
     font-size: 15px;
     color: var(--grey);
 }
