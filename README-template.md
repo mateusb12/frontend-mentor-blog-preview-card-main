@@ -1,6 +1,6 @@
 # Frontend Mentor - Blog preview card solution
 
-This is a solution to the [Blog preview card challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/blog-preview-card-ckPaj01IcS). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+This is a solution to the [Blog preview card challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/blog-preview-card-ckPaj01IcS). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
 ## Table of contents
 
@@ -28,19 +28,11 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
-
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
-
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it. 
-
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
-
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
+![](./design/screenshot.png)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [https://github.com/mateusb12/frontend-mentor-blog-preview-card-main](https://your-solution-url.com)
 - Live Site URL: [Add live site URL here](https://your-live-site-url.com)
 
 ## My process
@@ -60,33 +52,76 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
-
-To see how you can add code snippets, see below:
-
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
+- I can set the colors as variables in css
 ```css
-.proud-of-this-css {
-  color: papayawhip;
+:root {
+    --yellow: hsl(47, 88%, 63%);
+    --black: hsl(0, 0%, 7%);
+    --shadow: hsl(0, 0%, 0%);
+    --white: hsl(0, 0%, 100%);
+    --grey: hsl(0, 0%, 50%);
+    --card-margin: 1em;
 }
 ```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
+- I can use @font-face to setup font config
+```css
+@font-face {
+  font-family: 'Figtree';
+  src: url('assets/fonts/static/Figtree-SemiBold.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+```
+- It's better to use rem than px to set up responsive design
+```css
+.div {
+  height: 31.2rem;
+}
+```
+- I can use a div::before to create shadows
+```css
+.card::before{
+    content: "";
+    position: absolute;
+    top: 0.2vh;
+    left: 0.2vw;
+    height: 31.2rem;
+    width: 22.1rem;
+    border-radius: 16px;
+    background-color: black;
+    z-index: -1;
+}
+```
+- Setting the tag "position: relative" on the father chiv sets its as the reference point (anchor) for any absolutely positioned children elements
+```css
+.card {
+    position: relative;
+}
+```
+- "display: inline-block;" makes the element width to be limited to what is really needed 
+-  The elements are `(<span>`, `<a>`, `<img>`)
+```css
+.learning {
+    display: inline-block;
+    font-size: 1.02em;
+    font-weight: 700;
+}
+```
+- In order to remove the underline from a link `(<a>)` you can use `"text-decoration: none;"`
+```css
+.foundations a{
+    color: black;
+    text-decoration: none;
 }
 ```
 
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+I want to continue working on
+- flexbox
+- responsive design
+- after-before design
 
 ### Useful resources
 
