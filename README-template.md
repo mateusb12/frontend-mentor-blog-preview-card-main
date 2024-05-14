@@ -42,13 +42,6 @@ Users should be able to:
 - Semantic HTML5 markup
 - CSS custom properties
 - Flexbox
-- CSS Grid
-- Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
 
 ### What I learned
 
@@ -126,9 +119,8 @@ I want to continue working on
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
+- Website - [Portfolio](https://mateusb12.github.io/mateus_portfolio/)
 - Frontend Mentor - [@mateusb12](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
 
 ## Acknowledgments
 
