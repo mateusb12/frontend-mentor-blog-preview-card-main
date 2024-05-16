@@ -13,8 +13,12 @@ jobs:
       - name: Checkout Source
         uses: actions/checkout@v3
 
+      - name: List files
+        run: ls -lha
+
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./  # Set this to your build directory if different
+          publish_dir: ./  # This should point to the directory containing index.html, which in your case, is './'
+
