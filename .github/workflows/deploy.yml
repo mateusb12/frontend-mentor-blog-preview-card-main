@@ -6,19 +6,23 @@ on:
       - master  # Set this to your default branch if different
 
 jobs:
-  build-and-deploy:
+  build_and_deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout Source
-        uses: actions/checkout@v3
+      - name: Checkout Repository
+        uses: actions/checkout@v2
 
-      - name: List files
-        run: ls -lha
+      - name: Build Static Site
+        run: make build  # Replace 'make build' with the actual command you use to build your site
+
+      - name: Upload Artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: static-files
+          path: /path/to/output  # Replace '/path/to/output' with the path to your built static site files
 
       - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./  # This should point to the directory containing index.html, which in your case, is './'
+        if: github.ref == 'refs/heads/main'  # Ensure this runs only on push to the default branch
+        uses: actions/deploy-pages@v1
 
